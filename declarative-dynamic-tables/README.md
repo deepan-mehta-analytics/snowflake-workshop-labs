@@ -5,8 +5,8 @@ Guide: https://www.snowflake.com/en/developers/guides/create-declarative-data-pi
 Second and final lab of Day 1 in the Northstar Badge sequence. Builds a
 small synthetic customer/order pipeline using Dynamic Tables' declarative
 chaining (`TARGET_LAG = DOWNSTREAM`), fully separate from every other
-database/dataset in this repo (`coco`, `COCO_WORKSHOP`, `DASH_DB_SI`,
-`tasty_bytes`).
+database/dataset in this repo (`COCO_WORKSHOP`, `DASH_DB_SI`, `tasty_bytes`)
+and from the flagship project's `coco` database.
 
 ## Recovery story — why this lab's assets look different from the others
 

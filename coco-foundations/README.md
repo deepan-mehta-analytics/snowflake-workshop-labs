@@ -2,11 +2,12 @@
 
 Source (verified, fetched directly): https://github.com/hindcraig3/cortex-code-foundations
 
-This is the **same reference workshop** this repo's AP invoice pipeline (`coco`
-database, `sql/`, `cortex_agent/`, `eval/`) was originally grounded in — the
-lab builds an equivalent pipeline from scratch under its own `COCO_WORKSHOP`
-database, entirely separate from the `coco` database used elsewhere in this
-repo. Do not point this lab at `coco` — it must use `COCO_WORKSHOP`.
+This is the **same reference workshop** the flagship AP invoice pipeline
+([`snowflake-cortex-ai`](https://github.com/deepan-mehta-analytics/snowflake-cortex-ai),
+`coco` database) was originally grounded in — the lab builds an equivalent
+pipeline from scratch under its own `COCO_WORKSHOP` database, entirely
+separate from the flagship's `coco` database. Do not point this lab at
+`coco` — it must use `COCO_WORKSHOP`.
 
 This lab is driven **inside Snowsight's CoCo panel** (the blue star icon,
 bottom-right corner) — not the local `cortex` CLI, no install required. Each

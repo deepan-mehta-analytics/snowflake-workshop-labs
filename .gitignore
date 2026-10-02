@@ -1,0 +1,50 @@
+# ── Agent workflow files (local-only, never tracked) ──────────
+# Project-level Claude instructions are private working notes.
+/CLAUDE.md
+# Session status tracker for the coding agent.
+/workflow_status.md
+# Rotated history of the session status tracker.
+/workflow_status_archive.md
+# Local design/plan notes for the coding agent.
+docs/superpowers/
+
+# ── Snowflake credentials ─────────────────────────────────────
+# Real connection files with account/user details.
+**/connection.toml
+# Private keys for key-pair auth.
+*.pem
+# Any local environment-variable file holding secrets.
+.env
+# Any SQL script filled in with a real secret/PAT value.
+*.local.sql
+
+# ── Grader / worksheet exports (can carry account PII) ────────
+# Snowsight's default export filenames for ad hoc worksheet results.
+**/Untitled*.csv
+**/scratchpad*.csv
+# Auto-grader result exports carry real account email and login name.
+**/Autograder_Result*.csv
+# Ad hoc SHOW/SELECT diagnostic output.
+**/schema-check.csv
+
+# ── Lab working files ─────────────────────────────────────────
+# Local unzip of dynamic-tables.zip (the zip itself is tracked).
+coco-foundations/assets/dynamic-tables/
+
+# ── Python ────────────────────────────────────────────────────
+# Compiled bytecode cache.
+__pycache__/
+# Compiled Python files.
+*.pyc
+# Local virtual environments.
+.venv/
+venv/
+
+# ── OS / editor ───────────────────────────────────────────────
+# macOS Finder metadata.
+.DS_Store
+# Windows Explorer thumbnail cache.
+Thumbs.db
+# Editor-local settings.
+.vscode/
+.idea/

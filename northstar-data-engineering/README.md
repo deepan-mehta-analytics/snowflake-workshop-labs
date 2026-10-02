@@ -8,7 +8,8 @@ This is the first of Day 1's two labs in the Northstar Badge sequence — run
 *before* the CoCo Foundations / From Zero to Agents labs (Day 2, already
 complete), per the actual badge program order. Uses Snowflake's "Tasty
 Bytes" food-truck sample dataset, fully separate from every other
-database/dataset in this repo (`coco`, `COCO_WORKSHOP`, `DASH_DB_SI`).
+database/dataset in this repo (`COCO_WORKSHOP`, `DASH_DB_SI`) and from the
+flagship project's `coco` database.
 
 **Scenario:** investigate why Tasty Bytes' Hamburg, Germany food truck sales
 dropped to $0 for several days in February 2022, using the
