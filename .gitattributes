@@ -1,0 +1,4 @@
+# GitHub Linguist misidentifies Snowflake SQL (.sql files) as PLpgSQL or skips it,
+# which misrepresents these labs as Postgres or Python projects.
+# Force the generic, dialect-neutral "SQL" label instead.
+*.sql linguist-language=SQL
