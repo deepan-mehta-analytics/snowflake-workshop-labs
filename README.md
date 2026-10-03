@@ -121,10 +121,9 @@ snowflake-workshop-labs/
 │   ├── README.md                      ← RAG eval scores, text-to-SQL comparison, cost, limitations
 │   ├── 00_preflight_checks.sql        ← read-only checks: name collisions, settings, region, models
 │   ├── 01_run_steps.md                ← click-by-click checklist A–F incl. the compatibility cell
-│   ├── 90_verify_grader_checks.sql    ← the grader's 6 lookups, submitting nothing
 │   └── assets/                        ← guide source + notebook, as published
 │
-└── .gitignore                         ← keeps grader exports and worksheet dumps (personal data) out of git
+└── .gitignore                         ← keeps grader scripts, grader dry runs and worksheet dumps out of git
 ```
 
 ---

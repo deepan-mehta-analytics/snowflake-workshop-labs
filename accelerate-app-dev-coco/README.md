@@ -28,11 +28,12 @@ Cortex Code (CoCo) is only used briefly, in the SQL worksheet before the noteboo
   that the 3 hard-coded models can be called.
 - `01_run_steps.md`: the click-by-click checklist (sections A–F), including the one added
   compatibility cell.
-- `90_verify_grader_checks.sql`: runs the grader's 6 lookups **without submitting
-  anything**. Use it before the real grader.
+Two grader-related files stay local and are gitignored:
 
-The personalised grader script stays local as `*.local.sql` (gitignored), because it
-contains the registration email.
+- The personalised grader script (`*.local.sql`), because it contains the registration
+  email.
+- A dry-run copy of the grader's 6 lookups (`*verify_grader*.sql`) that submits nothing.
+  It reproduces the answer key, so it isn't published.
 
 ## Steps (summary; full detail in `01_run_steps.md`)
 
@@ -51,8 +52,8 @@ contains the registration email.
    `SHOW SERVICES IN ACCOUNT;`. Shutting down the kernel alone leaves the service running.
 6. **Cost cleanup:** set `FEATURE_SEARCH_SERVICE`'s `TARGET_LAG` to `'1 day'`. The vendor
    cell sets 1 minute.
-7. **Grader:** run `90_verify_grader_checks.sql`, then the grader script once, in full,
-   with Run All.
+7. **Grader:** run a local dry run of the grader's checks first (the grader's own lookups
+   without the `grader()` calls), then the grader script once, in full, with Run All.
 
 ### The one non-vendor change: a compatibility cell
 
@@ -71,7 +72,7 @@ built to show. The graded objects never call an LLM, so the grade is unaffected.
 **Complete.** All auto-grader checks (BWRA01–06) passed on the workshop day,
 2026-10-03 (UTC), in a single Run All. Query history confirms the greeting, all seven
 `grader()` calls (`AUTO_GRADER_IS_WORKING` plus BWRA01–06) and the summary block succeeded.
-The local dry run `90_verify_grader_checks.sql` matched 6/6 beforehand.
+A local dry run of the same lookups matched 6/6 beforehand.
 
 | Check | Object | Result |
 |---|---|---|

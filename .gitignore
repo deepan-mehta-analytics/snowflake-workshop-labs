@@ -26,6 +26,8 @@ docs/superpowers/
 **/Autograder_Result*.csv
 # Ad hoc SHOW/SELECT diagnostic output.
 **/schema-check.csv
+# Local dry runs of a lab's auto-grader checks (reproduce the answer key), any lab folder.
+**/*verify_grader*.sql
 
 # ── Lab working files ─────────────────────────────────────────
 # Local unzip of dynamic-tables.zip (the zip itself is tracked).

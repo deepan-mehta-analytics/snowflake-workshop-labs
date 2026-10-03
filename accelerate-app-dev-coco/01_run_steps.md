@@ -141,8 +141,9 @@ ALTER CORTEX SEARCH SERVICE AI_WORKSHOP_DB.RAG_DATA.FEATURE_SEARCH_SERVICE
 Submissions made before the workshop opens may not count, so build A–E early and
 run F on the day.
 
-1. Run `90_verify_grader_checks.sql` (Run All). This submits nothing. All 6 rows need
-   `actual = expected`.
+1. Run the local dry run of the grader's checks (`*verify_grader*.sql`, gitignored: the
+   grader's 6 lookups as one `SELECT`, with no `greeting()` or `grader()` calls). This
+   submits nothing. All 6 rows need `actual = expected`.
 2. Open `autograder_bwra.local.sql` (gitignored, contains your email) in a new
    worksheet, **unedited**
 3. Run it **in full**: Ctrl+A → Run All. Don't run it section by section.
