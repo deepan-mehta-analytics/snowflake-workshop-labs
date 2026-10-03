@@ -55,9 +55,17 @@ verbatim in [`from-zero-to-agents/assets/setup.sql`](../from-zero-to-agents/asse
 ## Status
 
 **Complete.** All auto-grader checks (BWSI01–06) passed against the live
-account on 2026-10-02. The submission is confirmed in query history, not just
-on the result screen. The workshop opens on 2026-10-03, after these
-submissions, so the grader will be re-submitted once it's live.
+account on 2026-10-02 and were re-submitted on the workshop day, 2026-10-03
+(UTC), from that day's landing-page script (identical to the earlier one).
+Query history confirms the greeting and every `grader()` call succeeded, so
+the result doesn't rest on the result screen alone.
+
+The script's final `WITH check_results` summary block fails intermittently
+with `Error parsing JSON: invalid UTF-8 sequence` (or `unknown keyword`). That
+block runs only in your own account and never contacts the grader, so the
+error doesn't affect the grade. To confirm a submission, check
+`INFORMATION_SCHEMA.QUERY_HISTORY` for `SUCCESS` on the `greeting()` call and
+all seven `grader()` calls.
 
 The `Sales_AI` agent isn't graded, but it was built and tested end to end in CoWork:
 

@@ -170,7 +170,8 @@ Day 2's labs were completed before Day 1's, which were only discovered afterward
 ## ⚠️ Known Limitations
 
 - **The lab scripts are Snowflake's, not mine.** They are kept as published so the auto-graders still match. My contribution is the verified run notes, fixes and cost guidance in each README.
-- **Some guide links are dead.** The `Snowflake-Labs/sfquickstarts` repo no longer resolves, so `declarative-dynamic-tables/` assets were recovered from other sources (documented in that README).
+- **Guide links can go dead.** The `Snowflake-Labs/sfquickstarts` repo didn't resolve when `declarative-dynamic-tables/` was run, so its assets were recovered from other sources (documented in that README). The repo was live again by 2026-10-02.
+- **The CoWork grader's summary query can fail.** Its final `WITH check_results` block intermittently throws a JSON / UTF-8 parse error. It runs only in your own account, so the submission is unaffected; query history is the proof (see `snowflake-cowork/`).
 - **Snowsight's UI changes between guide versions.** Menu paths in the READMEs reflect the UI at the time each lab was run.
 - **The Agent Studio save bug.** In `from-zero-to-agents/`, an agent saved through Snowsight's Agent Studio lost a tool and pointed at the wrong warehouse. It happened again in `snowflake-cowork/`, where a tool's warehouse saved as blank. The fixes are in those READMEs.
 - **Agent answers need checking.** In `snowflake-cowork/`, the agent treated a partial month as a full one and claimed a decline in ad spend from a table with no spend column. Both are documented in that README.
