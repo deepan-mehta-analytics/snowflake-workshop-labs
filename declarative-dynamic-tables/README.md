@@ -10,6 +10,10 @@ and from the flagship project's `coco` database.
 
 ## Recovery story — why this lab's assets look different from the others
 
+> **Update 2026-10-03:** `Snowflake-Labs/sfquickstarts` is reachable again, and
+> the guide's `setup.sql` link resolves (checked via the GitHub API). The story
+> below records what happened when the lab was run.
+
 This guide's own companion links are **dead**. The page links to
 `https://github.com/Snowflake-Labs/sfquickstarts/blob/master/site/sfguides/src/create-declarative-data-pipelines-with-dynamic-tables/assets/setup.sql`
 for `setup.sql`, but the entire `Snowflake-Labs/sfquickstarts` repository now
