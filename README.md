@@ -233,7 +233,7 @@ From `accelerate-app-dev-coco/`:
 - **Snowsight's UI changes between guide versions.** Menu paths in the READMEs reflect the UI at the time each lab was run.
 - **The CoWork grader's summary query can fail.** Its final `WITH check_results` block intermittently throws a JSON / UTF-8 parse error. It runs only in your own account, so the submission is unaffected; query history is the proof (see `snowflake-cowork/`).
 - **Retired models in published notebooks.** `accelerate-app-dev-coco/` hard-codes `mistral-large2` and `llama3-70b`, both retired. One added cell redirects them to `llama3.3-70b`, so its LLM scores aren't directly comparable to the guide's.
-- **The Snowpipe guide doesn't run as written.** Its storage integration has a quoting syntax error, it leaves the pipe paused, it changes your default role and it never tests a load. All the fixes are in `getting-started-with-snowpipe/`.
+- **The Snowpipe guide needs a few additions to run end to end.** The storage integration needed a quoting fix, the pipe had to be resumed after creation, the default-role change had to be reverted at teardown, and a test load was added to prove ingestion. All of these are in `getting-started-with-snowpipe/`.
 
 ### 🤖 Agents
 
