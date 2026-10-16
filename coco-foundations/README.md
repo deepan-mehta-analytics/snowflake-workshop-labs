@@ -1,5 +1,7 @@
 # CoCo Foundations — Northstar Badge Lab 1 (run first)
 
+Credential: [*Northstar - Getting Started with Cortex Code*](https://developerbadges.snowflake.com/9354da7d-5564-4aae-a353-3669cdd0fb49) — issued 2026-07-24 by Snowflake Developers (verifiable on Accredible).
+
 Source (verified, fetched directly): https://github.com/hindcraig3/cortex-code-foundations
 
 This is the **same reference workshop** the flagship AP invoice pipeline

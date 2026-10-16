@@ -1,5 +1,7 @@
 # Northstar Badge Lab — Create Declarative Data Pipelines with Dynamic Tables (Day 1, Lab 2)
 
+Credential: [*Creating Declarative Data Pipelines with Dynamic Tables*](https://developerbadges.snowflake.com/6bee48dc-af73-441d-8bf5-492b40ed9952) — issued 2026-07-24 by Snowflake Developers (verifiable on Accredible).
+
 Guide: https://www.snowflake.com/en/developers/guides/create-declarative-data-pipelines-with-dynamic-tables/
 
 Second and final lab of Day 1 in the Northstar Badge sequence. Builds a

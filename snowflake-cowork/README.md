@@ -1,4 +1,6 @@
-# Getting Started with Snowflake CoWork — Skill Badge lab
+# Getting Started with Snowflake CoWork — Northstar Badge lab
+
+Credential: [*Building Intelligent Data Application with Snowflake*](https://developerbadges.snowflake.com/a2e44f0f-e82b-41be-a48c-ad01ce5fd1ba) — issued 2026-10-15 by Snowflake Developers (verifiable on Accredible).
 
 Source page: https://www.snowflake.com/en/developers/guides/getting-started-with-cowork/
 

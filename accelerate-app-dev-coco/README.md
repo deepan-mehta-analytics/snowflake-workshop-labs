@@ -1,4 +1,6 @@
-# Accelerate App Dev with Cortex Code — Skill Badge lab
+# Accelerate App Dev with Cortex Code — Snowflake Developers badge lab
+
+Credential: [*Accelerate AI Development: Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo*](https://developerbadges.snowflake.com/8a2d878d-a3ac-434a-bb96-276e7cd8caa6) — issued 2026-10-15 by Snowflake Developers (verifiable on Accredible).
 
 Guide: https://www.snowflake.com/en/developers/guides/accelerate-app-dev-coco/
 

@@ -1,5 +1,7 @@
 # Northstar Badge Lab — Data Engineering with Snowflake (Day 1, Lab 1)
 
+Credential: [*Northstar - Data Ingestion, Transformation, and Delivery with Snowflake*](https://developerbadges.snowflake.com/fa443254-ddb7-4c0c-be05-c8b51643ca2e) — issued 2026-07-24 by Snowflake Developers (verifiable on Accredible).
+
 Guide: https://www.snowflake.com/en/developers/guides/snowflake-northstar-data-engineering/
 Companion repo (verified real via GitHub API, not WebFetch summary alone):
 https://github.com/Snowflake-Labs/sfguide-snowflake-northstar-data-engineering

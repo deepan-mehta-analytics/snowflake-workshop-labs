@@ -2,7 +2,7 @@
 
 ## ⚡ Quick Summary
 
-This repo records every Snowflake hands-on workshop and Skill Badge lab I have completed: the lab scripts as Snowflake published them, plus a README per lab documenting how it was actually run on a live trial account. That includes the setup that worked, the costs it ran up and the things the official guide got wrong. All four labs of the **Snowflake Northstar Badge** have been completed and passed Snowflake's own auto-graders, as have the **Getting Started with Snowflake CoWork**, **Accelerate App Dev with Cortex Code** and **Getting Started with Snowpipe** Skill Badge labs.
+This repo records every Snowflake hands-on workshop badge lab I have completed: the lab scripts as Snowflake published them, plus a README per lab documenting how it was actually run on a live trial account. That includes the setup that worked, the costs it ran up and the things the official guide got wrong. All seven labs passed Snowflake's own auto-graders and earned an official, verifiable **Snowflake Developers credential**: six Northstar badges plus the Accelerate AI Development badge. The full list is in my [credential wallet](https://developerbadges.snowflake.com/profile/supernovasurfersolutions/wallet).
 
 The labs cover data engineering (COPY INTO, UDFs and Streamlit in Snowflake), declarative Dynamic Table pipelines, event-driven S3 ingestion with Snowpipe, Cortex Code (Snowflake's AI coding agent), Snowflake Intelligence agents used through Snowflake CoWork, and a RAG + text-to-SQL notebook evaluated with LLM-as-judge scoring. My original project work lives separately in the flagship repo, [`snowflake-cortex-ai`](https://github.com/deepan-mehta-analytics/snowflake-cortex-ai). This repo is the badge evidence, kept apart from it.
 
@@ -16,17 +16,15 @@ The labs cover data engineering (COPY INTO, UDFs and Streamlit in Snowflake), de
 [![SQL](https://img.shields.io/badge/SQL-Snowflake-4479A1?style=for-the-badge&logo=snowflake&logoColor=white)](https://docs.snowflake.com/)
 [![Cortex AI](https://img.shields.io/badge/Cortex-Agents_%2B_CoCo-6E56CF?style=for-the-badge)](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents)
 [![Streamlit](https://img.shields.io/badge/Streamlit-in_Snowflake-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://docs.snowflake.com/en/developer-guide/streamlit/about-streamlit)
-[![Northstar](https://img.shields.io/badge/Northstar_Badge-4%2F4_Passed-success?style=for-the-badge)](https://github.com/deepan-mehta-analytics/snowflake-workshop-labs)
-[![CoWork](https://img.shields.io/badge/CoWork_Lab-Passed-success?style=for-the-badge)](snowflake-cowork/)
-[![App Dev with CoCo](https://img.shields.io/badge/App_Dev_with_CoCo-Passed-success?style=for-the-badge)](accelerate-app-dev-coco/)
-[![Snowpipe](https://img.shields.io/badge/Snowpipe_Lab-Passed-success?style=for-the-badge)](getting-started-with-snowpipe/)
+[![Credentials](https://img.shields.io/badge/Snowflake_Credentials-7_Issued-success?style=for-the-badge&logo=snowflake&logoColor=white)](https://developerbadges.snowflake.com/profile/supernovasurfersolutions/wallet)
+[![Northstar](https://img.shields.io/badge/Northstar_Badges-6-success?style=for-the-badge)](https://developerbadges.snowflake.com/profile/supernovasurfersolutions/wallet)
 [![AWS](https://img.shields.io/badge/AWS-S3_%2B_IAM-FF9900?style=for-the-badge&logo=amazonwebservices&logoColor=white)](getting-started-with-snowpipe/)
 
 ---
 
 ## 📌 Project Overview
 
-This repo is **a verified log of Snowflake workshop labs, each run end-to-end on a live account and checked by Snowflake's auto-grader**.
+This repo is **a verified log of Snowflake workshop labs, each run end-to-end on a live account, checked by Snowflake's auto-grader and backed by an official credential**.
 
 It includes:
 
@@ -117,18 +115,18 @@ snowflake-workshop-labs/
 │   ├── README.md                      ← semantic view, search service, agent steps + known issues
 │   └── assets/                        ← setup SQL + marketing data CSV
 │
-├── snowflake-cowork/                  ← Skill Badge: Getting Started with Snowflake CoWork
+├── snowflake-cowork/                  ← Northstar: Getting Started with Snowflake CoWork
 │   ├── README.md                      ← run notes, agent test results, known limitations
 │   ├── 01_support_cases_search.sql    ← Cortex Search service SUPPORT_CASES + verification
 │   └── 02_sales_ai_agent_steps.md     ← click-by-click Agent Studio + CoWork checklist
 │
-├── accelerate-app-dev-coco/           ← Skill Badge: Accelerate App Dev with Cortex Code
+├── accelerate-app-dev-coco/           ← Accelerate App Dev with Cortex Code (Accelerate AI Development badge)
 │   ├── README.md                      ← RAG eval scores, text-to-SQL comparison, cost, limitations
 │   ├── 00_preflight_checks.sql        ← read-only checks: name collisions, settings, region, models
 │   ├── 01_run_steps.md                ← click-by-click checklist A–F incl. the compatibility cell
 │   └── assets/                        ← guide source + notebook, as published
 │
-├── getting-started-with-snowpipe/     ← Skill Badge: Getting Started with Snowpipe (S3 auto-ingest)
+├── getting-started-with-snowpipe/     ← Northstar: Getting Started with Snowpipe (S3 auto-ingest)
 │   ├── README.md                      ← grader result, end-to-end load proof, debugging trace, guide defects
 │   ├── 00_preflight_checks.sql        ← read-only checks: name collisions, default role, region
 │   ├── 01_run_steps.md                ← click-by-click AWS + Snowflake checklist A–I with fixes
@@ -169,24 +167,19 @@ There's no automated test suite. Each lab is checked by Snowflake's own auto-gra
 
 ## 📊 Results / Performance
 
-**Northstar Badge — 4/4 labs passed.**
+**7 official credentials issued by Snowflake Developers** ([wallet](https://developerbadges.snowflake.com/profile/supernovasurfersolutions/wallet)). Each link below opens the verifiable credential.
 
-| Day | Lab | Grader checks | Result |
-|---|---|---|---|
-| 1 | Data Engineering with Snowflake | BWITD01–06 | ✅ Passed |
-| 1 | Declarative Data Pipelines with Dynamic Tables | BWDT01–07 | ✅ Passed |
-| 2 | CoCo Foundations | BWCC01–05 | ✅ Passed |
-| 2 | From Zero to Agents | BWZA01–06 | ✅ Passed |
+| Lab folder | Credential (official title) | Issued | Grader checks | Result |
+|---|---|---|---|---|
+| `northstar-data-engineering/` | [Northstar - Data Ingestion, Transformation, and Delivery with Snowflake](https://developerbadges.snowflake.com/fa443254-ddb7-4c0c-be05-c8b51643ca2e) | 2026-07-24 | BWITD01–06 | ✅ Passed |
+| `declarative-dynamic-tables/` | [Creating Declarative Data Pipelines with Dynamic Tables](https://developerbadges.snowflake.com/6bee48dc-af73-441d-8bf5-492b40ed9952) (Northstar) | 2026-07-24 | BWDT01–07 | ✅ Passed |
+| `coco-foundations/` | [Northstar - Getting Started with Cortex Code](https://developerbadges.snowflake.com/9354da7d-5564-4aae-a353-3669cdd0fb49) | 2026-07-24 | BWCC01–05 | ✅ Passed |
+| `from-zero-to-agents/` | [From Zero to Agents: Building End-To-End Data Pipelines for an AI Agent](https://developerbadges.snowflake.com/61240fa4-7eb0-4942-a4ca-818d87759592) (Northstar) | 2026-07-24 | BWZA01–06 | ✅ Passed |
+| `snowflake-cowork/` | [Building Intelligent Data Application with Snowflake](https://developerbadges.snowflake.com/a2e44f0f-e82b-41be-a48c-ad01ce5fd1ba) (Northstar) | 2026-10-15 | BWSI01–06 | ✅ Passed; the ungraded `Sales//AI` agent also passed 4/4 CoWork tests |
+| `accelerate-app-dev-coco/` | [Accelerate AI Development: Building AI Applications with Snowflake Cortex: RAG, Text-to-SQL & CoCo](https://developerbadges.snowflake.com/8a2d878d-a3ac-434a-bb96-276e7cd8caa6) | 2026-10-15 | BWRA01–06 | ✅ Passed; RAG eval means 0.80 / 0.96 / 0.90 (groundedness / context / answer relevance) |
+| `getting-started-with-snowpipe/` | [Northstar - Build an Automated Data Pipeline with Snowpipe](https://developerbadges.snowflake.com/f5d91b83-916f-4a92-bacb-8193671f49be) | 2026-10-15 | BWSS01–04 | ✅ Passed (one day after the live workshop); auto-ingest proven: S3 upload → loaded in ~20 s, no duplicate on refresh |
 
-Day 2's labs were completed before Day 1's, which were only discovered afterwards. Each README documents its own setup, independent of that order.
-
-**Skill Badge labs**
-
-| Lab | Grader checks | Result |
-|---|---|---|
-| Getting Started with Snowflake CoWork | BWSI01–06 | ✅ Passed; the ungraded `Sales//AI` agent also passed 4/4 CoWork tests |
-| Accelerate App Dev with Cortex Code | BWRA01–06 | ✅ Passed; RAG eval means 0.80 / 0.96 / 0.90 (groundedness / context / answer relevance) |
-| Getting Started with Snowpipe | BWSS01–04 | ✅ Passed (one day after the live workshop); auto-ingest proven: S3 upload → loaded in ~20 s, no duplicate on refresh |
+"(Northstar)" marks credentials whose title doesn't say Northstar but whose description does. Credentials are issued after a workshop's grading closes, not when the grader runs: the October labs were graded on 2026-10-02/03 and issued on 2026-10-15. The first four were run Day 2 before Day 1; each README documents its own setup, independent of that order.
 
 **Text-to-SQL, BUILDING segment** (from `accelerate-app-dev-coco/`):
 
@@ -208,6 +201,7 @@ Day 2's labs were completed before Day 1's, which were only discovered afterward
 - **Retired models in published notebooks.** `accelerate-app-dev-coco/` hard-codes `mistral-large2` and `llama3-70b`, both retired. One added cell redirects them to `llama3.3-70b`, so its LLM scores aren't directly comparable to the guide's.
 - **Notebook compute keeps billing after "Shut down kernel".** The Workspaces notebook service defaults to a 24-hour idle timeout and has to be suspended explicitly (`ALTER SERVICE … SUSPEND`).
 - **The Snowpipe guide doesn't run as written.** Its storage integration has a quoting syntax error, it leaves the pipe paused, it changes your default role and it never tests a load. All the fixes are in `getting-started-with-snowpipe/`.
+- **The Snowpipe credential describes more than this lab covers.** Its description lists the live workshop's content (test data generation, key-pair auth, the Python connector, streaming). This repo ran the public guide's file-based S3 auto-ingest, which is what the grader checks. Key-pair auth, the Python connector and Snowpipe Streaming weren't done here.
 - **A missing S3 event notification fails silently.** Nothing errors; files just never load. Check the bucket's notification card, and use `ALTER PIPE … REFRESH` for files uploaded before it existed.
 
 ---

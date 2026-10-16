@@ -1,4 +1,6 @@
-# Getting Started with Snowpipe — Skill Badge lab
+# Getting Started with Snowpipe — Northstar Badge lab
+
+Credential: [*Northstar - Build an Automated Data Pipeline with Snowpipe*](https://developerbadges.snowflake.com/f5d91b83-916f-4a92-bacb-8193671f49be) — issued 2026-10-15 by Snowflake Developers (verifiable on Accredible).
 
 Guide: https://www.snowflake.com/en/developers/guides/getting-started-with-snowpipe/
 

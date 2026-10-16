@@ -1,5 +1,7 @@
 # From Zero to Agents — Northstar Badge Lab 2 (run after CoCo Foundations)
 
+Credential: [*From Zero to Agents: Building End-To-End Data Pipelines for an AI Agent*](https://developerbadges.snowflake.com/61240fa4-7eb0-4942-a4ca-818d87759592) — issued 2026-07-24 by Snowflake Developers (verifiable on Accredible).
+
 Source page: https://www.snowflake.com/en/developers/guides/from-zero-to-agents/
 Step-by-step quickstart: https://quickstarts.snowflake.com/guide/getting-started-with-snowflake-intelligence/index.html
 (the quickstart domain itself still blocks automated fetch — 403 — but the
