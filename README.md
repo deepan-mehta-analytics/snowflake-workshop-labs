@@ -31,7 +31,7 @@ This repo is **a verified log of Snowflake workshop labs, each run end-to-end on
 - 🚚 **Data Engineering with Snowflake** — Tasty Bytes ingestion with `COPY INTO`, a Marketplace weather share, UDFs and a Streamlit-in-Snowflake app *(BWITD01–06 passed)*
 - 🔗 **Declarative Data Pipelines with Dynamic Tables** — chained Dynamic Tables with `TARGET_LAG = DOWNSTREAM` over synthetic customer/order data *(BWDT01–07 passed)*
 - 📥 **Getting Started with Snowpipe** — event-driven loading from an S3 bucket in AWS Tokyo through a storage integration, an external stage and an auto-ingest pipe *(BWSS01–04 passed)*
-  - Six guide defects fixed, including a syntax error and a pipe the guide leaves paused
+  - Additions to the guide applied, including a quoting fix and a step to resume the pipe
   - A silent "nothing loads" failure traced to an S3 event notification that had never saved
   - Auto-ingest then proven end to end: about 20 s from event to load
 
@@ -142,7 +142,7 @@ snowflake-workshop-labs/
 │   └── assets/                        ← guide source + notebook, as published
 │
 ├── getting-started-with-snowpipe/     ← Northstar: Getting Started with Snowpipe (S3 auto-ingest)
-│   ├── README.md                      ← grader result, end-to-end load proof, debugging trace, guide defects
+│   ├── README.md                      ← grader result, end-to-end load proof, debugging trace, run notes
 │   ├── 00_preflight_checks.sql        ← read-only checks: name collisions, default role, region
 │   ├── 01_run_steps.md                ← click-by-click AWS + Snowflake checklist A–I with fixes
 │   ├── 99_teardown.sql                ← drops all lab objects, restores the default role

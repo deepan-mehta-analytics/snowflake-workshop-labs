@@ -11,7 +11,7 @@ objects.
 Source (verified real): `Snowflake-Labs/sfquickstarts`,
 `site/sfguides/src/getting-started-with-snowpipe/` at commit `e8b5509` (2025-12-20). The
 published page was read in a browser on 2026-10-03 and matches the source exactly, including
-the defects listed below.
+the points noted below.
 
 The lab sets up **event-driven loading from AWS S3**:
 
@@ -29,7 +29,7 @@ notification.
   `assets/` folder holds only screenshots, so those aren't copied.
 - `00_preflight_checks.sql`: read-only checks for name collisions, the current default role
   (the guide changes it) and the account region (it decides the bucket region).
-- `01_run_steps.md`: the click-by-click checklist (A–I) with every guide defect fixed.
+- `01_run_steps.md`: the click-by-click checklist (A–I) with every addition from the notes below applied.
 - `99_teardown.sql`: drops every Snowflake object the lab created and restores the default
   role. The AWS clean-up steps are in `01_run_steps.md` section I.
 
@@ -86,30 +86,30 @@ exist. `ALTER PIPE … REFRESH` queued both staged files. Only the one not yet l
 ingested, because Snowpipe's load history prevented a duplicate of file 2. The table ended
 with 5 rows, not 7.
 
-## Known limitations and guide defects
+## Known limitations and run notes
 
-- **The storage integration doesn't run as written.** The guide puts the role ARN and bucket
-  path in double quotes and ends with a curly `”`, which is a syntax error. Use single quotes.
+- **The storage integration needs single quotes.** The guide puts the role ARN and bucket
+  path in double quotes and ends with a curly `”`, which Snowflake rejects. Use single quotes.
   Create the integration **once**: `CREATE OR REPLACE` issues a new external ID and silently
   breaks the AWS trust policy.
-- **The guide leaves the pipe paused.** Transferring pipe ownership requires pausing it, and
-  the guide never resumes it, so auto-ingest would load nothing. Snowflake's documented resume
+- **The pipe needs resuming after the ownership transfer.** Transferring pipe ownership
+  requires pausing it, and the guide has no resume step, so auto-ingest would load nothing. Snowflake's documented resume
   after an ownership transfer is `SYSTEM$PIPE_FORCE_RESUME`, run as the new owner.
-- **The guide changes your default role.** `ALTER USER … SET DEFAULT_ROLE = S3_role` makes
+- **Note your default role before starting.** `ALTER USER … SET DEFAULT_ROLE = S3_role` makes
   Snowsight open in a role that can see almost nothing. Note the old value first
   (`00_preflight_checks.sql`) and restore it in teardown.
-- **The guide never tests a load.** It ends at "micro-batching is now active". The table has
+- **A test load is worth adding.** The guide ends at "micro-batching is now active". The table has
   one `STRING` column and the COPY uses the default CSV format, so a file with commas (more
   than one column) is skipped. Test with plain one-column lines.
-- **Region matters, and the guide says any region will do.** Its trial instructions say US
-  West (Oregon), and the bucket step says "choose your desired region". This account is in
+- **Match the bucket region to the account.** The guide's trial instructions say US West
+  (Oregon), and the bucket step says "choose your desired region". This account is in
   AWS Tokyo, and S3 only sends event notifications to a queue in the bucket's own region, so
   the bucket must be in `ap-northeast-1`.
-- **Placeholders are inconsistent** (`<prefix>` vs `<path>` for the same folder), and the
+- **Placeholder names vary** (`<prefix>` vs `<path>` for the same folder), and the
   IAM policy's `ListBucket` condition allows every prefix (`"*"`). Here it's limited to
   `snowpipe/*`.
-- **Admin roles can't see the pipe** unless `S3_ROLE` is granted to `SYSADMIN`. The guide
-  doesn't do this. Here it was added, which let a `SYSADMIN` connection run the diagnosis and
+- **Admin roles can't see the pipe** unless `S3_ROLE` is granted to `SYSADMIN`. That grant
+  was added here, which let a `SYSADMIN` connection run the diagnosis and
   the refresh.
 - **Whitespace is kept.** Lines with a leading space loaded with the space, because the COPY
   default is `TRIM_SPACE = FALSE`.
