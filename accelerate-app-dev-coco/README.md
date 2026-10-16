@@ -150,14 +150,14 @@ finding about the regions.
   LLM-generated number in this README comes from `llama3.3-70b`, not the models the guide
   names. In Module 1, the output labelled `llama3-70b` was actually served by
   `llama3.3-70b`.
-- **The guide and the notebook disagree in places:**
+- **The guide and the notebook differ in places:**
   - The guide says chunking uses `SPLIT_TEXT_RECURSIVE_CHARACTER`, but the notebook slices
     text in Python. CoCo's answer about the function was still correct.
   - The guide mentions Snowsight Evaluations, but Step 5 is a hand-written
     LLM-as-judge.
   - The guide names the notebook file `building-ai-apps-snowflake-cortex.ipynb`.
   - Module 1 Step 3's "grounded" prompt labels `SUM(O_TOTALPRICE)` as revenue, which is
-    the same tax-inclusive mistake Module 3 later warns about.
+    the same tax-inclusive measure Module 3 later cautions against.
 - **The notebook compute bills until it's suspended.** The service defaults to a 24-hour
   idle timeout, and **Shut down kernel** doesn't stop it. In this run it still showed
   `RUNNING` until `ALTER SERVICE … SUSPEND`.

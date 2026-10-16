@@ -103,9 +103,9 @@ here).
   Snowflake's 60-second minimum billing floor (~0.27 credits), well under
   the pre-run estimate, since Tasty Bytes' 454 well-partitioned S3 files
   parallelize very well on XLARGE.
-- **Found and fixed a real dependency gap**: `hamburg_sales.sql`'s
-  `daily_weather_v` view joins `tasty_bytes.raw_pos.country`, but that table
-  is never created by `load_tasty_bytes.sql` — it only exists in the
+- **Added the `country` load step**: `hamburg_sales.sql`'s
+  `daily_weather_v` view joins `tasty_bytes.raw_pos.country`, which
+  `load_tasty_bytes.sql` doesn't create — it is loaded in the
   fill-in-the-blank exercise's answer key (`solution/solution_copy_into.sql`).
   The README originally treated `load_tasty_bytes.sql` and
   `copy_into.sql`/`solution_copy_into.sql` as alternative paths for the same
@@ -120,10 +120,10 @@ here).
   **51.6–66.5 mph** across that exact window — every other February day
   runs 17–43 mph. Temperature that week (39–46°F) is unremarkable. Root
   cause: a windstorm shut the Hamburg truck down for 6 days.
-- **Known limitation found in the vendor's own `updated_hamburg_sales.sql`**
+- **Note on `updated_hamburg_sales.sql`**
   (kept as-downloaded, not silently patched, per this project's "download
-  labs verbatim" convention — same call made for the From Zero to Agents
-  lab's vendor Dynamic Table join bug): the combined `weather_hamburg` view
+  labs verbatim" convention — same approach as the From Zero to Agents
+  lab's Dynamic Table join note): the combined `weather_hamburg` view
   joins `daily_weather_v` directly to `orders_v`. `daily_weather_v` has
   **100 rows per day for Hamburg** (one per matching postal code in the
   Pelmorex weather share), so the join fans out daily sales ×100 in that

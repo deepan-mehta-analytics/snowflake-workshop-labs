@@ -100,9 +100,9 @@ link is a correlation in timing, not a measured cause.
   `impressions` and `clicks`. There's **no spend column**, so the agent
   inferred spend from lower impressions and clicks. Check claims like this
   against the schema before quoting them.
-- **The Agent Studio save bug is still present.** The `Send_Email` tool's
+- **The Agent Studio save issue appeared again.** The `Send_Email` tool's
   warehouse saved as `""` until a query timeout (60s) was set as well. This is
-  the same family of bug as the one documented in From Zero to Agents. Always
+  the same kind of issue as the one documented in From Zero to Agents. Always
   confirm the saved tools with `DESCRIBE AGENT`, not the UI.
 - **CoWork offers to set up recurring automations** (a weekly ticket scan, a
   monthly spike report) after it answers. Each run is a paid agent call, about

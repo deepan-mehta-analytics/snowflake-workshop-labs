@@ -120,7 +120,7 @@ intended sequence — satisfied.
 
 ### Known limitations
 
-- The `MarketingAgent`'s tool configuration initially had two real bugs
+- The `MarketingAgent`'s tool configuration initially had two configuration problems
   (traced via `DESCRIBE AGENT`, not guessed): only 1 of the intended 3 tools
   was present, and the one present tool referenced a nonexistent warehouse
   (`DASH_WH` instead of the real `DASH_WH_SI`). Root cause: Snowsight's Agent
@@ -128,13 +128,12 @@ intended sequence — satisfied.
   Save/Publish at least twice. Fixed by issuing `CREATE OR REPLACE AGENT ...
   FROM SPECIFICATION` directly via SQL instead of the UI.
 - The `ENRICHED_MARKETING_INTELLIGENCE` Dynamic Table (step 4's `JOIN
-  support_cases s ON m.category = s.product`) always returns 0 rows against
-  the quickstart's own sample data — `support_cases.product` values
+  support_cases s ON m.category = s.product`) returns 0 rows with
+  the quickstart's sample data — `support_cases.product` values
   (`Cyclone Helmet`, `ThermoJacket Pro`, etc.) don't match either
   `marketing_campaign_metrics.category` (`Fitness Wear`) or
-  `products.PRODUCT_NAME` (`Fitness Item 1`, etc.) under any join path. This
-  is a vendor sample-data inconsistency, not fixable without fabricating a
-  mapping — the agent correctly reports it can't answer clicks-vs-satisfaction
+  `products.PRODUCT_NAME` (`Fitness Item 1`, etc.) under any join path. The
+  sample tables share no common key, so no mapping was invented — the agent correctly reports it can't answer clicks-vs-satisfaction
   questions rather than fabricating a result.
 - `dash_wh_si` defaults to `warehouse_size='large'` in `setup.sql`; resized to
   `XSMALL` with `AUTO_SUSPEND = 60` after this lab burned meaningfully more

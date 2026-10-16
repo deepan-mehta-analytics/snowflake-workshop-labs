@@ -48,7 +48,7 @@ This repo is **a verified log of Snowflake workshop labs, each run end-to-end on
 ### 📝 Documentation in every lab
 
 - 🔍 **Per-lab run notes** — every guide step cross-checked against the real companion repo or raw files, including two cases where an AI web summary invented steps or repo paths
-- 💰 **Cost and safety notes** — where a guide's script asks for an oversized warehouse, and how auto-grader scripts and output carrying personal data were kept out of git
+- 💰 **Cost and safety notes** — where a guide's script uses a larger warehouse than the lab needs, and how auto-grader scripts and output carrying personal data were kept out of git
 
 ---
 
@@ -229,7 +229,7 @@ From `accelerate-app-dev-coco/`:
 
 ### 📚 Guides and platform
 
-- **Guide links can go dead.** The `Snowflake-Labs/sfquickstarts` repo didn't resolve when `declarative-dynamic-tables/` was run, so its assets were recovered from other sources (documented in that README). The repo was live again by 2026-10-02.
+- **Guide links may stop resolving.** The `Snowflake-Labs/sfquickstarts` repo didn't resolve when `declarative-dynamic-tables/` was run, so its assets were recovered from other sources (documented in that README). The repo was live again by 2026-10-02.
 - **Snowsight's UI changes between guide versions.** Menu paths in the READMEs reflect the UI at the time each lab was run.
 - **The CoWork grader's summary query can fail.** Its final `WITH check_results` block intermittently throws a JSON / UTF-8 parse error. It runs only in your own account, so the submission is unaffected; query history is the proof (see `snowflake-cowork/`).
 - **Retired models in published notebooks.** `accelerate-app-dev-coco/` hard-codes `mistral-large2` and `llama3-70b`, both retired. One added cell redirects them to `llama3.3-70b`, so its LLM scores aren't directly comparable to the guide's.
@@ -237,7 +237,7 @@ From `accelerate-app-dev-coco/`:
 
 ### 🤖 Agents
 
-- **The Agent Studio save bug.** In `from-zero-to-agents/`, an agent saved through Snowsight's Agent Studio lost a tool and pointed at the wrong warehouse. It happened again in `snowflake-cowork/`, where a tool's warehouse saved as blank. The fixes are in those READMEs.
+- **The Agent Studio save issue.** In `from-zero-to-agents/`, an agent saved through Snowsight's Agent Studio lost a tool and pointed at the wrong warehouse. It happened again in `snowflake-cowork/`, where a tool's warehouse saved as blank. The fixes are in those READMEs.
 - **Agent answers need checking.** In `snowflake-cowork/`, the agent treated a partial month as a full one and claimed a decline in ad spend from a table with no spend column. Both are documented in that README.
 
 ### 💸 Silent costs and failures

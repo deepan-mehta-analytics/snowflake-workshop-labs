@@ -16,7 +16,7 @@ and from the flagship project's `coco` database.
 > the guide's `setup.sql` link resolves (checked via the GitHub API). The story
 > below records what happened when the lab was run.
 
-This guide's own companion links are **dead**. The page links to
+At the time of the run, the guide's companion links didn't resolve. The page links to
 `https://github.com/Snowflake-Labs/sfquickstarts/blob/master/site/sfguides/src/create-declarative-data-pipelines-with-dynamic-tables/assets/setup.sql`
 for `setup.sql`, but the entire `Snowflake-Labs/sfquickstarts` repository now
 404s — confirmed via both `github.com` and the GitHub API (not rate-limited,
@@ -36,12 +36,12 @@ Two independent recovery paths were used instead, each cross-verified:
    directly via `curl` + byte-offset parsing (not WebFetch summarization).
    Read start-to-finish through "Conclusion And Resources" to confirm
    nothing was cut off.
-2. **`setup.sql`**: has no inline fallback on the guide page — only the dead
-   GitHub link. Recovered from `venkateshviswanathan/Snowflake-Labs`, a
+2. **`setup.sql`**: has no inline fallback on the guide page — only the GitHub
+   link, which wasn't resolving. Recovered from `venkateshviswanathan/Snowflake-Labs`, a
    personal fork/copy at the *exact original path*
    (`site/sfguides/src/create-declarative-data-pipelines-with-dynamic-tables/assets/setup.sql`),
-   pushed 2026-04-17 — predating whenever the real upstream repo was taken
-   down. Verified via **internal self-consistency**, not just trust in the
+   pushed 2026-04-17 — predating the period when the upstream repo was
+   unreachable. Verified via **internal self-consistency**, not just trust in the
    fork: its `customers` table shape (`custid`, `cname`, `spendlimit`) and
    `orders` table's JSON shape (`purchase:"prodid"`/`"purchase_amount"`/
    `"quantity"`/`"purchase_date"`) match exactly what `create-dt.sql`
