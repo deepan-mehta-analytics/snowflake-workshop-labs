@@ -252,3 +252,7 @@ What the grader needs (from reading the script before running it):
    - S3 → `<bucket>` → **Properties** → delete the event notification
    - empty the bucket → delete the bucket
    - IAM → delete the role `snowflake_role` → delete the policy `snowflake_access`
+3. Check that it is really gone. The S3 bucket list shows buckets from every Region, so
+   `<bucket>` must be missing from it; IAM → Roles and IAM → Policies (Customer managed) must
+   find nothing for "snowflake". The bucket was missed once (found on 2026-10-19), which is
+   why this check exists.

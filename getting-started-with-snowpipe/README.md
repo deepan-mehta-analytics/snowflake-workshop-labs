@@ -54,8 +54,10 @@ Query history confirms the greeting and all five `grader()` calls succeeded: the
 | BWSS04 | pipe "ownership" (the check counts the pipe row; it doesn't read the owner) | ✅ |
 
 The grader doesn't check that anything actually loads. That was tested separately (below),
-and then everything was torn down: all Snowflake objects, the default role, the S3 bucket and
-the IAM role and policy.
+and then it was torn down: all Snowflake objects, the default role, and the IAM role and
+policy on 2026-10-03. The S3 bucket was missed that day: a check of the AWS account on
+2026-10-19 still listed it, and it was emptied and deleted then. Section I of
+`01_run_steps.md` now ends with that check.
 
 ## Results: auto-ingest, proven end to end
 
@@ -124,3 +126,5 @@ with 5 rows, not 7.
   belongs to Snowflake; event notifications are free.
 - **Snowflake:** two tiny files through Snowpipe's serverless compute, well under 0.01
   credit. An idle pipe costs nothing, and everything was dropped after grading.
+- **The missed bucket** stayed for 16 days with a few bytes stored and no requests, so its
+  cost stayed effectively $0.
