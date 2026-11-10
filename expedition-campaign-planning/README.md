@@ -103,11 +103,17 @@ audience, overlapping dates) counts it, and so does the grader.
 
 ## Cost
 
-- **Notebook service:** about 2 hours 15 minutes on the X-Small CPU pool (connected 20:30 PST,
-  suspended 22:44 PST).
-- **CoCo:** about 8 prompts, plus the semantic view build and its validation runs.
-- **Warehouse:** X-Small `COMPUTE_WH` for the notebook cells, check cells and grader.
-- **Total:** recorded from billing after the run; see the root README.
+Measured from `ACCOUNT_USAGE.METERING_HISTORY` by hour (04:00–06:59 UTC on 2026-11-08):
+
+| Item | What ran | Credits |
+|---|---|---|
+| CoCo (`SNOWFLAKE_COCO_SNOWSIGHT`) | about 8 prompts, plus the semantic view build and its validation runs | 1.57 |
+| Warehouses | X-Small `COMPUTE_WH` (notebook cells, check cells, grader) 0.57, plus the account's default `DASH_WH_SI` 0.38 | 0.95 |
+| Notebook service | about 2 hours 15 minutes on the X-Small CPU pool (connected 20:30 PST, suspended 22:44 PST) | 0.26 |
+| **Total** | | **≈ 2.79 credits ≈ $8.90** |
+
+The dollar figure applies that day's billed rate: both Expedition labs ran on 2026-11-08 (UTC), which billed
+4.62 credits for $14.70 (≈ $3.18 per credit). CoCo was the largest single cost.
 
 ## Known limitations and run notes
 
