@@ -31,9 +31,12 @@ CoCo Foundations lab. Its own database: `DASH_DB_SI`.
   a git integration to the real upstream repo above, pulls
   `marketing_campaigns.yaml` semantic model from it, and sets up an email
   notification integration + `send_email` procedure
-- `marketing_data.csv` — appears to be a manual-upload alternative/supplement
-  to the S3-loaded `marketing_campaign_metrics` table; confirm against the
-  live guide before using — not yet cross-checked
+- `marketing_data.csv` — the guide's "Updating Marketing Data" file
+  (byte-identical to `sfquickstarts` `from-zero-to-agents/assets/`, checked
+  2026-11-11 at commit `3fef17b`): uploaded in Snowsight via Database
+  Explorer → `DASH_DB_SI.RETAIL.MARKETING_CAMPAIGN_METRICS` → Load Data, as
+  `SNOWFLAKE_INTELLIGENCE_ADMIN`, adding rows to the S3-loaded table. This
+  step isn't in the run recorded below
 
 ## Steps
 

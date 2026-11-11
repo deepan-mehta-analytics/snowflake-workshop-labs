@@ -79,12 +79,11 @@ Downloaded verbatim from the verified companion repo:
 
 ## Auto-grader
 
-Not yet independently verified for this specific lab (the companion repo
-has no grader script — same as every other lab in this project, since the
-real grader is a personalized script obtained from the Northstar Streamlit
-app after registration, never stored in any public repo). User has
-confirmed an auto-grader exists for this lab; treat it the same as the
-other 3 labs — scratch worksheet only, never saved to disk, once reached.
+Run and passed, all 6 checks (BWITD01–06); see Status below. The
+companion repo has no grader script, as for every lab in this repo: the
+real grader is a personalized script from the Northstar Streamlit app after
+registration, never stored in any public repo. It was run in a scratch
+worksheet only and never saved to disk.
 
 ## Status
 

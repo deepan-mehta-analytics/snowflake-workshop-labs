@@ -104,13 +104,13 @@ config — so this would have been safe to downsize manually even if
 
 ## Auto-grader
 
-Not yet run. Expect the same convention as the other 3 labs — a
-personalized script (registration email/name embedded) obtained from the
-Northstar auto-grader Streamlit app, run in a scratch worksheet only, never
-saved to disk or committed. Per the confirmed change to that app's UI (see
-`northstar-data-engineering/README.md`), select this lab from the bare
-dropdown — exact display title not yet confirmed, look for wording close to
-"Create Declarative Data Pipelines with Dynamic Tables".
+Run and passed, all 7 checks (BWDT01–07); see Status below. Same
+convention as the other Northstar labs: a personalized script (registration
+email/name embedded) from the Northstar auto-grader Streamlit app, run in a
+scratch worksheet only, never saved to disk or committed. In that app, pick
+this lab from the bare dropdown (see `northstar-data-engineering/README.md`
+for the UI change); the credential's title is "Creating Declarative Data
+Pipelines with Dynamic Tables".
 
 ## Status
 
